@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shred Till You Drop - Snowboarding</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="path/to/swiper-bundle.min.css">  <script src="path/to/swiper-bundle.min.js"></script>  ...
 </head>
 <body>
   <header class="header">
@@ -23,6 +25,20 @@
   </header>
 
   <main>
+    <section class="slider">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://unsplash.com/s/photos/snowboard-jump" alt="Snowboarder with amazing air">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://unsplash.com/s/photos/snowboarder-backcountry" alt="Snowboarder riding through backcountry">
+          </div>
+          </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
     <section class="hero">
       <img src="https://unsplash.com/s/photos/ski-jumping" alt="Snowboarder jumping through powder">
       <h2>Welcome Snowboard Enthusiasts!</h2>
@@ -56,5 +72,23 @@
   <footer class="footer">
     <p>&copy; 2024 Shred Till You Drop</p>
   </footer>
+
+
+  <script>
+    var swiper = new Swiper('.swiper', {
+      // Optional configuration options for the slider
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }
+    });
+  </script>
 </body>
 </html>
