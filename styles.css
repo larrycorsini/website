@@ -76,7 +76,7 @@ body {
     border-radius: 50%;
     padding: 5px;
     margin-right: 10px;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     width: 20px;
     height: 20px;
@@ -160,7 +160,7 @@ body {
 }
 
 .date {
-    font-size: 14px;
+    font-size: 16px;
     color: #777;
 }
 
@@ -171,7 +171,7 @@ body {
 .references-sec p strong {
     color: #050505;
     line-height: 14px;
-    font-size: 16px;
+    font-size: 24px;
     font-family: 'Catamaran';
     margin: 0;
     padding: 0;
@@ -244,7 +244,7 @@ body {
     }
 
     .references-sec p strong {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 12px;
     }
 }
