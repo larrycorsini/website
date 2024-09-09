@@ -7,6 +7,7 @@ body {
     flex-direction: column;
     height: 100vh;
     background-color: #f4f4f4;
+    overflow: hidden; /* Prevents extra scroll */
 }
 
 .header {
@@ -38,6 +39,7 @@ body {
     margin: 0;
     background-color: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: calc(100vh - 80px); /* Adjust height minus header */
 }
 
 .pdf-frame {
@@ -54,5 +56,14 @@ body {
 
     .header p {
         font-size: 1em;
+    }
+
+    .pdf-container {
+        height: calc(100vh - 120px); /* Adjust height for mobile header */
+    }
+
+    .pdf-frame {
+        height: 100%;
+        width: 100%;
     }
 }
