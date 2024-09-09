@@ -1,250 +1,58 @@
-/* Base styles for desktop */
+/* Base styling */
 body {
-    font-family: 'Catamaran', sans-serif;
     margin: 0;
     padding: 0;
+    font-family: 'Catamaran', sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    height: 100vh;
     background-color: #f4f4f4;
 }
 
-.container {
-    display: flex;
-    width: 1100px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 3% 0;
-}
-
-.left-box {
-    width: 30%;
-    background-color: #e8e8e8;
+.header {
+    background-color: #333;
+    color: #fff;
     padding: 20px;
-}
-
-.right-box {
-    width: 70%;
-    padding: 20px;
-    padding-left: 40px; /* More space between columns */
-}
-
-.section {
-    margin-bottom: 40px; /* Increase space between sections */
-}
-
-.sectiontitle {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 20px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #050505;
-    letter-spacing: 0.05em;
-    line-height: 16px;
-}
-
-.name-sec .name {
-    text-align: left;
-    text-transform: uppercase;
-    font-family: 'Nunito Sans';
-    letter-spacing: 0.1em;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 33px;
-    margin: 0;
-    padding: 0;
-    color: #050505;
-}
-
-.name-sec .name .first-name,
-.name-sec .name .last-name {
-    display: block; /* Ensure each name part is on a separate line */
-}
-
-.contact-sec .contact-info p {
-    display: flex;
-    align-items: center;
-    margin: 20px 0;
-}
-
-.contact-sec .contact-info p .icon {
-    background-color: black;
-    color: white;
-    border-radius: 50%;
-    padding: 5px;
-    margin-right: 10px;
-    font-size: 16px;
     text-align: center;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.icon-phone::before {
-    content: "\260E";
-}
-
-.icon-email::before {
-    content: "\2709";
-}
-
-.icon-address::before {
-    content: "\1F588";
-}
-
-.skills-sec ul,
-.languages-sec ul,
-.certifications-sec ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.skills-sec ul li,
-.languages-sec ul li,
-.certifications-sec ul li {
-    margin-bottom: 10px; /* Increase space between items */
-    position: relative;
-    padding-left: 40px; /* Adjust padding for indentation */
-    list-style: none;
-}
-
-.skills-sec ul li::before,
-.languages-sec ul li::before,
-.certifications-sec ul li::before {
-    content: "\2022";
-    position: absolute;
-    left: 0;
-    top: 50%; /* Vertically center the bullet point */
-    transform: translateY(-50%);
-    font-size: 35px; /* Adjust size of bullet points */
-    color: #050505; /* Ensure bullet points are visible */
-}
-
-.summary-sec p,
-.projects-sec p,
-.references-sec p {
-    margin: 10px 0;
-}
-
-.experience-sec h3,
-.education-sec p {
-    margin: 10px 0;
-}
-
-.experience-sec ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-.experience-sec ul li {
-    margin-bottom: 5px;
-}
-
-.experience-sec .date {
-    margin-bottom: 5px; /* Adjust the margin as needed */
-}
-
-.experience-sec h3 {
-    margin-top: 5px; /* Adjust the margin as needed */
-    margin-bottom: 2px; /* Reduce space below the job title */
-}
-
-.experience-sec p {
-    margin-top: 2px; /* Reduce space above the company name */
-    margin-bottom: 10px; /* Keep space below the company name consistent */
-}
-
-.date {
-    font-size: 16px;
-    color: #777;
-}
-
-.light-text {
-    color: #777;
-}
-
-.references-sec p strong {
-    color: #050505;
-    line-height: 14px;
-    font-size: 24px;
-    font-family: 'Catamaran';
+.header h1 {
+    font-size: 2.5em;
     margin: 0;
+}
+
+.header p {
+    font-size: 1.2em;
+    margin: 5px 0 0;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+}
+
+/* PDF Container */
+.pdf-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0;
-    font-weight: bold;
+    margin: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 /* Mobile styles */
 @media (max-width: 768px) {
-    body {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
+    .header h1 {
+        font-size: 2em;
     }
 
-    .container {
-        flex-direction: column;
-        width: 100%;
-        max-width: 600px;
-        margin: 0 auto;
-        box-shadow: none; /* Remove box shadow on mobile */
-        background-color: transparent; /* Remove background color on mobile */
-        padding: 0; /* Remove padding */
-    }
-
-    .left-box, .right-box {
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        background-color: transparent; /* Remove background color */
-        box-shadow: none; /* Remove box shadow */
-    }
-
-    .section {
-        margin-bottom: 20px; /* Reduce space between sections */
-        padding: 10px; /* Add padding to sections */
-        background-color: #fff; /* Add background color to sections */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow to sections */
-        border-radius: 5px; /* Add border radius for a smoother look */
-    }
-
-    .sectiontitle {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-
-    .name-sec .name {
-        font-size: 20px;
-        line-height: 28px;
-    }
-
-    .contact-sec .contact-info p {
-        margin: 10px 0;
-    }
-
-    .skills-sec ul li,
-    .languages-sec ul li,
-    .certifications-sec ul li {
-        padding-left: 30px;
-    }
-
-    .skills-sec ul li::before,
-    .languages-sec ul li::before,
-    .certifications-sec ul li::before {
-        font-size: 25px;
-    }
-
-    .date {
-        font-size: 12px;
-    }
-
-    .references-sec p strong {
-        font-size: 16px;
-        line-height: 12px;
+    .header p {
+        font-size: 1em;
     }
 }
